@@ -6,6 +6,30 @@ import { GraphQLClient, gql } from "graphql-request";
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_API_KEY);
 console.log(process.env.NEXT_PUBLIC_API_KEY);
 
+const QUERY = gql`
+  {
+    events {
+      createdAt
+      date
+      id
+      publishedAt
+      slug
+      title
+      updatedAt
+    }
+  }
+`;
+
+export async function getStaticProps() {
+  const { events } = await graphcms.request(QUERY);
+  return {
+    props: {
+      events,
+    },
+    revalidate: 10,
+  };
+}
+
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -15,7 +39,11 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}></main>
+      <main className={styles.main}>
+        {events.map((event) => {
+          <EventCard title={event.title}  />;
+        })}
+      </main>
     </div>
   );
 }
