@@ -7,4 +7,19 @@
 
 .nav {
   margin-top: 15%;
+  width: fit-content;
+}
+
+.burger {
+  top: 0;
+  position: absolute;
+  font-size: 70px;
+}
+
+.menuTitle {
+  top: 36%;
+  margin-left: -4%;
+  position: absolute;
+  font-size: 70px;
+  transform: rotate(270deg);
 }

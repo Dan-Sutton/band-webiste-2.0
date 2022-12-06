@@ -1,9 +1,10 @@
 import Head from "next/head";
+import { useState } from "react";
 import styles from "../styles/Home.module.css";
-import Link from "next/link";
 import Nav from "./components/Nav";
 
-export default function Home({ events }) {
+export default function Home() {
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <div className={styles.container}>
       <Head>
@@ -12,9 +13,27 @@ export default function Home({ events }) {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.nav}>
-          <Nav />
-        </div>
+        {!showMenu ? (
+          <p
+            className={styles.menuTitle}
+            onMouseEnter={() => setShowMenu(!showMenu)}
+          >
+            MENU
+          </p>
+        ) : (
+          <></>
+        )}
+
+        {showMenu ? (
+          <div
+            className={styles.nav}
+            onMouseLeave={() => setShowMenu(!showMenu)}
+          >
+            <Nav />
+          </div>
+        ) : (
+          <></>
+        )}
 
         <video autoPlay loop muted infinite className={styles.video}>
           <source
