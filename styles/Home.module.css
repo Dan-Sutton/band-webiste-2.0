@@ -2,6 +2,14 @@
   padding: 0 2rem;
 }
 
+.video {
+  width: 100vw;
+  top: 0;
+  position: absolute;
+  z-index: 0;
+}
+
+
 .main {
   min-height: 100vh;
   padding: 4rem 0;
