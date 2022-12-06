@@ -1,0 +1,12 @@
+.navContainer {
+  width: 50%;
+}
+
+.navList {
+  list-style: none;
+  font-size: 80px;
+}
+
+.listItem:hover {
+  font-size: 100px;
+}
