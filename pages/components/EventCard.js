@@ -14,14 +14,14 @@ function EventCard({
 }) {
   return (
     <div>
-      <Link href={"/events/" + slug}>
-        <h1>{title}</h1>
-        <p>{date}</p>
-        <div className={styles.imgContainer}>
-          <Image width={400} height={200} src={coverPhoto.url} alt=""></Image>
-        </div>
-        <p>{description}</p>
-      </Link>
+      {/* <Link href={"/events/" + slug}> */}
+      <h1>{title}</h1>
+      <p>{date}</p>
+      <div className={styles.imgContainer}>
+        <Image width={400} height={200} src={coverPhoto.url} alt=""></Image>
+      </div>
+      <p>{description}</p>
+      {/* </Link> */}
     </div>
   );
 }
