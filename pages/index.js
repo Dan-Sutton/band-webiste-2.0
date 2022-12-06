@@ -1,6 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import styles from "../styles/Home.module.css";
+import { GraphQLClient, gql } from "graphql-request";
+
+const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_API_KEY);
+console.log(process.env.NEXT_PUBLIC_API_KEY);
 
 export default function Home() {
   return (
