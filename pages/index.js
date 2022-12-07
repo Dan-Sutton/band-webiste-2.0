@@ -66,12 +66,23 @@ export default function Home() {
           </p>
 
           {showMenu ? (
-            <div
+            <motion.div
+              initial={{ opacity: 1, x: -100 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: {
+                  type: "spring",
+                  duration: 0.5,
+                  bounce: 0.2,
+                },
+              }}
+              s
               className={styles.nav}
               onMouseLeave={() => setShowMenu(!showMenu)}
             >
               <Nav />
-            </div>
+            </motion.div>
           ) : (
             <></>
           )}
