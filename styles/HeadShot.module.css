@@ -1,0 +1,21 @@
+.headshotImage {
+  width: 200px;
+  height: 200px;
+}
+
+.headshot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headshot h2 {
+  margin-bottom: -5%;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.headshot p {
+  font-family: "Courier New", Courier, monospace;
+  width: 70%;
+  text-align: center;
+}

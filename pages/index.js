@@ -5,6 +5,7 @@ import Nav from "./components/Nav";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
+import HeadShot from "./components/HeadShot";
 
 export default function Home() {
   const { ref, inView } = useInView({
@@ -90,32 +91,15 @@ export default function Home() {
           <h1>ABOUT</h1>
 
           <div className={styles.headshots}>
-            <motion.div
-              className={styles.headshot}
-              whileHover={{
-                scale: 1.15,
-                transition: {
-                  type: "spring",
-                  duration: 0.8,
-                  bounce: 0.6,
-                },
-              }}
-              whileTap={{ scale: 0.8 }}
-            >
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                src={
-                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/4_h1fesw.png"
-                }
-                className={styles.headshotImage}
-              />
-              <h2>Dan Sutton</h2>
-              <p>Lead vocals and Rhythm Guitar</p>
-            </motion.div>
+            <HeadShot
+              name={"Dan Sutton"}
+              desc={"Lead vocals and Rhythm Guitarist"}
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/4_h1fesw.png"
+              }
+            />
 
-            <motion.div
+            {/* <motion.div
               whileHover={{
                 scale: 1.15,
                 transition: {
@@ -179,7 +163,7 @@ export default function Home() {
                 }
                 className={styles.headshotImage}
               />
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </main>
