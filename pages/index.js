@@ -58,12 +58,22 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <p
+          <motion.p
+            initial={{ rotate: 270 }}
+            whileHover={{
+              rotate: 180,
+              scale: 1.15,
+              transition: {
+                type: "spring",
+                duration: 0.8,
+                bounce: 0.6,
+              },
+            }}
             className={styles.menuTitle}
             onClick={() => setShowMenu(!showMenu)}
           >
             III
-          </p>
+          </motion.p>
 
           {showMenu ? (
             <motion.div

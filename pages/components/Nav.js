@@ -1,23 +1,65 @@
 import Link from "next/link";
 import React from "react";
 import styles from "../../styles/Nav.module.css";
+import { motion } from "framer-motion";
 
 function Nav() {
   return (
     <div className={styles.navContainer}>
       <ul className={styles.navList}>
-        <li className={styles.listItem}>
+        <motion.li
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+          s
+          className={styles.listItem}
+        >
           <Link href={"/setList"}>SET LIST</Link>
-        </li>
-        <li className={styles.listItem}>
+        </motion.li>
+        <motion.li
+          className={styles.listItem}
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+        >
           <Link href={"/contact"}>CONTACT</Link>
-        </li>
-        <li className={styles.listItem}>
+        </motion.li>
+        <motion.li
+          className={styles.listItem}
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+        >
           <Link href={"/gallery"}>GALLERY</Link>
-        </li>
-        <li className={styles.listItem}>
+        </motion.li>
+        <motion.li
+          className={styles.listItem}
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+        >
           <Link href={"/events"}>EVENTS</Link>
-        </li>
+        </motion.li>
       </ul>
     </div>
   );
