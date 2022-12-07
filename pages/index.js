@@ -6,6 +6,7 @@ import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import HeadShot from "./components/HeadShot";
+import About from "./components/About";
 
 export default function Home() {
   const { ref, inView } = useInView({
@@ -88,7 +89,7 @@ export default function Home() {
           animate={animation}
           className={styles.aboutSection}
         >
-          <h1>ABOUT</h1>
+          <h1>Who are The Wildfire?</h1>
 
           <div className={styles.headshots}>
             <HeadShot
@@ -123,6 +124,12 @@ export default function Home() {
             />
           </div>
         </motion.div>
+
+        <div className={styles.aboutContentContainer}>
+          <div className={styles.aboutContent}>
+            <About />
+          </div>
+        </div>
       </main>
     </div>
   );
