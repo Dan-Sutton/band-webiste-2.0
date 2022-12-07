@@ -129,6 +129,20 @@ export default function Home() {
           <div className={styles.aboutContent}>
             <About />
           </div>
+
+          <motion.button
+            className={styles.contactButton}
+            whileHover={{
+              scale: 1.15,
+              transition: {
+                type: "spring",
+                duration: 0.8,
+                bounce: 0.6,
+              },
+            }}
+          >
+            Get in contact now
+          </motion.button>
         </div>
       </main>
     </div>
