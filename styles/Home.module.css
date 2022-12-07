@@ -9,14 +9,17 @@
   width: 100%;
   text-align: center;
   z-index: -1;
+  font-family: "Noto Serif Display";
 }
 
 .subtitle {
-  font-size: 40px;
+  font-size: 35px;
   width: 100%;
   margin-top: -8%;
   text-align: center;
   z-index: -1;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 500;
 }
 
 .video {

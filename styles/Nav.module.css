@@ -6,6 +6,7 @@
   list-style: none;
   font-size: 76px;
   margin-top: 40%;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .listItem:hover {
