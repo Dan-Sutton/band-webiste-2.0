@@ -37,12 +37,24 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.fullHeader}>
-          <div className={styles.heading}>
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{
+              opacity: 1,
+              y: 0,
+              transition: {
+                type: "spring",
+                duration: 3,
+                bounce: 0.2,
+              },
+            }}
+            className={styles.heading}
+          >
             <h1 className={styles.title}>THE WILDFIRE</h1>
             <p className={styles.subtitle}>
               Dynamic 4-piece function band, perfect for any event.
             </p>
-          </div>
+          </motion.div>
 
           <p
             className={styles.menuTitle}
@@ -78,42 +90,93 @@ export default function Home() {
           <h1>ABOUT</h1>
 
           <div className={styles.headshots}>
-            <Image
-              width={500}
-              height={500}
-              alt=""
-              src={
-                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/4_h1fesw.png"
-              }
-              className={styles.headshotImage}
-            />
-            <Image
-              width={500}
-              height={500}
-              alt=""
-              src={
-                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/1_jbqdrc.png"
-              }
-              className={styles.headshotImage}
-            />
-            <Image
-              width={500}
-              height={500}
-              alt=""
-              src={
-                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/3_tzxb5p.png"
-              }
-              className={styles.headshotImage}
-            />
-            <Image
-              width={500}
-              height={500}
-              alt=""
-              src={
-                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/2_t5bef9.png"
-              }
-              className={styles.headshotImage}
-            />
+            <motion.div
+              whileHover={{
+                scale: 1.15,
+                transition: {
+                  type: "spring",
+                  duration: 0.8,
+                  bounce: 0.6,
+                },
+              }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src={
+                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/4_h1fesw.png"
+                }
+                className={styles.headshotImage}
+              />
+            </motion.div>
+
+            <motion.div
+              whileHover={{
+                scale: 1.15,
+                transition: {
+                  type: "spring",
+                  duration: 0.8,
+                  bounce: 0.6,
+                },
+              }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src={
+                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/1_jbqdrc.png"
+                }
+                className={styles.headshotImage}
+              />
+            </motion.div>
+
+            <motion.div
+              whileHover={{
+                scale: 1.15,
+                transition: {
+                  type: "spring",
+                  duration: 0.8,
+                  bounce: 0.6,
+                },
+              }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src={
+                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/3_tzxb5p.png"
+                }
+                className={styles.headshotImage}
+              />
+            </motion.div>
+
+            <motion.div
+              whileHover={{
+                scale: 1.15,
+                transition: {
+                  type: "spring",
+                  duration: 0.8,
+                  bounce: 0.6,
+                },
+              }}
+              whileTap={{ scale: 0.8 }}
+            >
+              <Image
+                width={500}
+                height={500}
+                alt=""
+                src={
+                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/2_t5bef9.png"
+                }
+                className={styles.headshotImage}
+              />
+            </motion.div>
           </div>
         </motion.div>
       </main>
