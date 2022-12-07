@@ -1,25 +1,53 @@
-.video {
-  width: 100vw;
-  top: 0;
+.heading {
+  top: 20%;
   position: absolute;
+  width: 100vw;
+}
+
+.title {
+  font-size: 150px;
+  width: 100%;
+  text-align: center;
   z-index: -1;
 }
 
-.nav {
-  margin-top: 15%;
-  width: fit-content;
+.subtitle {
+  font-size: 40px;
+  width: 100%;
+  margin-top: -8%;
+  text-align: center;
+  z-index: -1;
 }
 
-.burger {
+.video {
+  width: 100%;
   top: 0;
+  z-index: -2;
+}
+
+.nav {
   position: absolute;
-  font-size: 70px;
+  top: 0;
+  height: 100vh;
+  width: 30%;
+  z-index: 2;
+  position: absolute;
+  background: rgba(24, 24, 24, 0.7);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(7.3px);
+  cursor: pointer;
 }
 
 .menuTitle {
-  top: 36%;
-  margin-left: -4%;
-  position: absolute;
+  top: -7%;
+  margin-left: 2%;
+  position: fixed;
   font-size: 70px;
   transform: rotate(270deg);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.fullHeader {
+  height: fit-content;
 }
