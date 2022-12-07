@@ -99,71 +99,28 @@ export default function Home() {
               }
             />
 
-            {/* <motion.div
-              whileHover={{
-                scale: 1.15,
-                transition: {
-                  type: "spring",
-                  duration: 0.8,
-                  bounce: 0.6,
-                },
-              }}
-              whileTap={{ scale: 0.8 }}
-            >
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                src={
-                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/1_jbqdrc.png"
-                }
-                className={styles.headshotImage}
-              />
-            </motion.div>
+            <HeadShot
+              name={"Tom Orves"}
+              desc={"Lead Guitar"}
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/1_jbqdrc.png"
+              }
+            />
 
-            <motion.div
-              whileHover={{
-                scale: 1.15,
-                transition: {
-                  type: "spring",
-                  duration: 0.8,
-                  bounce: 0.6,
-                },
-              }}
-              whileTap={{ scale: 0.8 }}
-            >
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                src={
-                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/3_tzxb5p.png"
-                }
-                className={styles.headshotImage}
-              />
-            </motion.div>
-
-            <motion.div
-              whileHover={{
-                scale: 1.15,
-                transition: {
-                  type: "spring",
-                  duration: 0.8,
-                  bounce: 0.6,
-                },
-              }}
-              whileTap={{ scale: 0.8 }}
-            >
-              <Image
-                width={500}
-                height={500}
-                alt=""
-                src={
-                  "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/2_t5bef9.png"
-                }
-                className={styles.headshotImage}
-              />
-            </motion.div> */}
+            <HeadShot
+              name={"Hayden Price"}
+              desc={"Drums, Percussion and backing vocals"}
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/3_tzxb5p.png"
+              }
+            />
+            <HeadShot
+              name={"James Price"}
+              desc={"Bassist and backing vocals"}
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/2_t5bef9.png"
+              }
+            />
           </div>
         </motion.div>
       </main>
