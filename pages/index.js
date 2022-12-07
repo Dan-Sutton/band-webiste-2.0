@@ -91,6 +91,7 @@ export default function Home() {
 
           <div className={styles.headshots}>
             <motion.div
+              className={styles.headshot}
               whileHover={{
                 scale: 1.15,
                 transition: {
@@ -110,6 +111,8 @@ export default function Home() {
                 }
                 className={styles.headshotImage}
               />
+              <h2>Dan Sutton</h2>
+              <p>Lead vocals and Rhythm Guitar</p>
             </motion.div>
 
             <motion.div
