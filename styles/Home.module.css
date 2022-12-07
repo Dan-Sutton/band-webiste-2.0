@@ -1,11 +1,11 @@
 .heading {
-  top: 20%;
+  top: 10vw;
   position: absolute;
   width: 100vw;
 }
 
 .title {
-  font-size: 150px;
+  font-size: 10vw;
   width: 100%;
   text-align: center;
   z-index: -1;
@@ -13,7 +13,7 @@
 }
 
 .subtitle {
-  font-size: 35px;
+  font-size: 2.3vw;
   width: 100%;
   margin-top: -8%;
   text-align: center;
@@ -42,15 +42,37 @@
 }
 
 .menuTitle {
-  top: -7%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin-top: max(-0.7vw, 10px);
   margin-left: 2%;
   position: fixed;
-  font-size: 70px;
+  font-size: max(6vw, 65px);
   transform: rotate(270deg);
   z-index: 3;
   cursor: pointer;
+  font-weight: 900;
 }
 
 .fullHeader {
   height: fit-content;
+}
+
+.aboutSection {
+  display: flex;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.headshots {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  justify-content: space-between;
+}
+
+.headshotImage {
+  width: 200px;
+  height: 200px;
 }

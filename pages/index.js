@@ -2,6 +2,7 @@ import Head from "next/head";
 import { useState } from "react";
 import styles from "../styles/Home.module.css";
 import Nav from "./components/Nav";
+import Image from "next/image";
 
 export default function Home() {
   const [showMenu, setShowMenu] = useState(false);
@@ -24,7 +25,7 @@ export default function Home() {
             className={styles.menuTitle}
             onClick={() => setShowMenu(!showMenu)}
           >
-            |||
+            III
           </p>
 
           {showMenu ? (
@@ -48,6 +49,45 @@ export default function Home() {
 
         <div className={styles.aboutSection}>
           <h1>ABOUT</h1>
+
+          <div className={styles.headshots}>
+            <Image
+              width={500}
+              height={500}
+              alt=""
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/4_h1fesw.png"
+              }
+              className={styles.headshotImage}
+            />
+            <Image
+              width={500}
+              height={500}
+              alt=""
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/1_jbqdrc.png"
+              }
+              className={styles.headshotImage}
+            />
+            <Image
+              width={500}
+              height={500}
+              alt=""
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/3_tzxb5p.png"
+              }
+              className={styles.headshotImage}
+            />
+            <Image
+              width={500}
+              height={500}
+              alt=""
+              src={
+                "https://res.cloudinary.com/dsdpn6tzq/image/upload/v1670429247/Website/new%20site/2_t5bef9.png"
+              }
+              className={styles.headshotImage}
+            />
+          </div>
         </div>
       </main>
     </div>
