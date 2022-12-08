@@ -43,7 +43,19 @@ function gallery(props) {
       <div className={styles.galleryContainer}>
         <h1>GALLERY</h1>
 
-        <div className={styles.images}>
+        <motion.div
+          className={styles.images}
+          initial={{ opacity: 0, x: 30 }}
+          animate={{
+            opacity: 1,
+            x: 0,
+            transition: {
+              type: "spring",
+              duration: 1,
+              bounce: 0.2,
+            },
+          }}
+        >
           {images.map((image, index) => {
             return (
               <GalleryImage
@@ -55,7 +67,7 @@ function gallery(props) {
               />
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </div>
   );
