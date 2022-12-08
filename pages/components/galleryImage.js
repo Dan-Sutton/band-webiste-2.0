@@ -2,13 +2,23 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import styles from "../../styles/galleryImage.module.css";
+import { motion } from "framer-motion";
 
 function GalleryImage({ image, desc, index, setViewDesc, viewDesc }) {
   return (
     <div>
       <div className={styles.imageContainer}>
         {viewDesc[0] && index === viewDesc[1] ? (
-          <p
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{
+              opacity: 1,
+              transition: {
+                type: "spring",
+                duration: 0.7,
+                bounce: 0.2,
+              },
+            }}
             index={index}
             className={styles.desc}
             onMouseLeave={() => {
@@ -16,7 +26,7 @@ function GalleryImage({ image, desc, index, setViewDesc, viewDesc }) {
             }}
           >
             {desc}
-          </p>
+          </motion.p>
         ) : (
           <></>
         )}

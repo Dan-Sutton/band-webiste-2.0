@@ -21,9 +21,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 350px;
+  width: 346px;
   position: absolute;
-  height: 200px;
+  height: 194px;
   background: rgba(24, 24, 24, 0.7);
   backdrop-filter: blur(8.3px);
   -webkit-backdrop-filter: blur(7.3px);
