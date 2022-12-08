@@ -7,3 +7,11 @@
 .galleryContainer h1 {
   font-size: 50px;
 }
+
+.images {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 70%;
+}
