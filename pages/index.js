@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
-import Nav from "./components/Nav";
+import NavButton from "./components/NavButton";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
@@ -58,44 +58,7 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <motion.p
-            initial={{ rotate: 270 }}
-            whileHover={{
-              rotate: 180,
-              scale: 1.15,
-              transition: {
-                type: "spring",
-                duration: 0.8,
-                bounce: 0.6,
-              },
-            }}
-            className={styles.menuTitle}
-            onClick={() => setShowMenu(!showMenu)}
-          >
-            III
-          </motion.p>
-
-          {showMenu ? (
-            <motion.div
-              initial={{ opacity: 1, x: -100 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                transition: {
-                  type: "spring",
-                  duration: 0.5,
-                  bounce: 0.2,
-                },
-              }}
-              s
-              className={styles.nav}
-              onMouseLeave={() => setShowMenu(!showMenu)}
-            >
-              <Nav />
-            </motion.div>
-          ) : (
-            <></>
-          )}
+          <NavButton />
 
           <video autoPlay loop muted infinite className={styles.video}>
             <source

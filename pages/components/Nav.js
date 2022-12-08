@@ -8,6 +8,19 @@ function Nav() {
     <div className={styles.navContainer}>
       <ul className={styles.navList}>
         <motion.li
+          className={styles.listItem}
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+        >
+          <Link href={"/"}>ABOUT</Link>
+        </motion.li>
+        <motion.li
           whileHover={{
             scale: 1.15,
             transition: {
@@ -19,7 +32,7 @@ function Nav() {
           s
           className={styles.listItem}
         >
-          <Link href={"/setList"}>SET LIST</Link>
+          <Link href={"/setlist"}>SET LIST</Link>
         </motion.li>
         <motion.li
           className={styles.listItem}
