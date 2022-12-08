@@ -6,30 +6,29 @@ import GalleryImage from "./components/galleryImage";
 import { useState } from "react";
 
 function gallery(props) {
-  const [viewDesc, setViewDesc] = useState([false, null]);
   const images = [
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
     {
-      src: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUFKYcXuM4onp47mQIIb5AgwVG6EXUWuZ6HGw7-7s&s",
+      src: "https://drive.google.com/uc?export=view&id=1OVbQeamHMVtl7a2I3ES9HUfvA_ZdL1RB",
       desc: "Doggo pulling a weird one",
     },
   ];
@@ -58,13 +57,7 @@ function gallery(props) {
         >
           {images.map((image, index) => {
             return (
-              <GalleryImage
-                viewDesc={viewDesc}
-                setViewDesc={setViewDesc}
-                image={image.src}
-                desc={image.desc}
-                index={index}
-              />
+              <GalleryImage image={image.src} desc={image.desc} index={index} />
             );
           })}
         </motion.div>

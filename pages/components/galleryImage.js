@@ -5,56 +5,18 @@ import styles from "../../styles/galleryImage.module.css";
 import { motion } from "framer-motion";
 import Swal from "sweetalert2";
 
-function GalleryImage({ image, desc, index, setViewDesc, viewDesc }) {
+function GalleryImage({ image, desc, index }) {
   return (
     <div>
       <div className={styles.imageContainer}>
-        {viewDesc[0] && index === viewDesc[1] ? (
-          <motion.div
-            onMouseLeave={() => {
-              setViewDesc([false, null]);
-            }}
-            className={styles.desc}
-            initial={{ opacity: 0 }}
-            animate={{
-              opacity: 1,
-              transition: {
-                type: "spring",
-                duration: 0.7,
-                bounce: 0.2,
-              },
-            }}
-          >
-            <p
-              index={index}
-              onMouseLeave={() => {
-                setViewDesc([false, null]);
-              }}
-            >
-              {desc}
-            </p>
-            <button
-              onClick={() => {
-                Swal.fire({
-                  showConfirmButton: false,
-                  imageUrl: image,
-                  imageWidth: "100%",
-                  imageHeight: "100%",
-                  imageAlt: "Custom image",
-                  background: "rgba(24, 24, 24, 0)",
-                });
-              }}
-            >
-              VIEW
-            </button>
-          </motion.div>
-        ) : (
-          <></>
-        )}
-
-        <Image
-          onMouseEnter={() => {
-            setViewDesc([true, index]);
+        <motion.img
+          whileHover={{
+            scale: 1.05,
+            transition: {
+              type: "spring",
+              duration: 1,
+              bounce: 0.6,
+            },
           }}
           className={styles.galleryImage}
           height={200}
