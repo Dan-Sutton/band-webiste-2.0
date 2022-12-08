@@ -1,10 +1,19 @@
-.setlist {
-}
-
 .setListContainer {
-  padding-top: 15vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+}
+
+.setlistUl {
+  list-style: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+  background-color: #1e1e1e;
+  width: 40%;
+  border-radius: 10px;
+  padding: 3%;
+}
+
+.setListContainer h1 {
+  font-size: 50px;
 }

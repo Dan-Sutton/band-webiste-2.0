@@ -1,8 +1,9 @@
 import React from "react";
 import NavButton from "./components/NavButton";
 import styles from "../styles/setlist.module.css";
+import { motion } from "framer-motion";
 
-function setlist(props) {
+function setlist() {
   return (
     <div className={styles.setlist}>
       <div className={styles.navposition}>
@@ -10,8 +11,20 @@ function setlist(props) {
       </div>
 
       <div className={styles.setListContainer}>
-        <h1>Set List</h1>
-        <ul>
+        <h1>SET LIST</h1>
+        <motion.ul
+          className={styles.setlistUl}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{
+            opacity: 1,
+            y: 0,
+            transition: {
+              type: "spring",
+              duration: 1,
+              bounce: 0.2,
+            },
+          }}
+        >
           <li> ROCK N ROLL STAR</li>
           <li>ALL STAR</li>
           <li>LONELY BOY</li>
@@ -44,7 +57,7 @@ function setlist(props) {
           <li>COME TOGETHER/LOSE YOURSELF</li>
           <li>SEVEN NATION ARMY</li>
           <li>FOOTLOOSE</li>
-        </ul>
+        </motion.ul>
       </div>
     </div>
   );
