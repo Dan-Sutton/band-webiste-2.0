@@ -11,6 +11,9 @@ function GalleryImage({ image, desc, index, setViewDesc, viewDesc }) {
       <div className={styles.imageContainer}>
         {viewDesc[0] && index === viewDesc[1] ? (
           <motion.div
+            onMouseLeave={() => {
+              setViewDesc([false, null]);
+            }}
             className={styles.desc}
             initial={{ opacity: 0 }}
             animate={{
