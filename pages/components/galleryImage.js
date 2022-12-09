@@ -11,10 +11,10 @@ function GalleryImage({ image, desc, index }) {
       <div className={styles.imageContainer}>
         <motion.img
           whileHover={{
-            scale: 1.05,
+            scale: 1.1,
             transition: {
               type: "spring",
-              duration: 1,
+              duration: 1.5,
               bounce: 0.6,
             },
           }}
