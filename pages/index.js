@@ -73,7 +73,7 @@ export default function Home() {
           animate={animation}
           className={styles.aboutSection}
         >
-          <h1>Who are The Wildfire?</h1>
+          <h1>WHO ARE THE WILDFIRE?</h1>
 
           <div className={styles.headshots}>
             <HeadShot

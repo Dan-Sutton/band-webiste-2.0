@@ -4,6 +4,7 @@ import styles from "../styles/gallery.module.css";
 import { motion } from "framer-motion";
 import GalleryImage from "./components/galleryImage";
 import { useState } from "react";
+import GalleryVideo from "./components/galleryVideo";
 
 function gallery(props) {
   const images = [
@@ -25,6 +26,13 @@ function gallery(props) {
     },
   ];
 
+  const videos = [
+    "https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he",
+    "https://drive.google.com/uc?export=view&id=16inJGfAyuknbhL--gDXwreM39mYac_wb",
+    "https://drive.google.com/uc?export=view&id=1x5cZLGI3KXfrx9feL3oXV_m9IetJV6xT",
+    "https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he",
+  ];
+
   return (
     <div className={styles.gallery}>
       <div className={styles.navposition}>
@@ -34,30 +42,16 @@ function gallery(props) {
       <div className={styles.galleryContainer}>
         <h1>GALLERY</h1>
 
-        <div className={styles.videos}>
-          <video
-            controls
-            width={500}
-            src="https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he"
-          />
-          <video
-            controls
-            width={500}
-            src="https://drive.google.com/uc?export=view&id=16inJGfAyuknbhL--gDXwreM39mYac_wb"
-          />
-          <video
-            controls
-            width={500}
-            height={300}
-            src="https://drive.google.com/uc?export=view&id=1x5cZLGI3KXfrx9feL3oXV_m9IetJV6xT"
-          />
-          <video
-            controls
-            width={500}
-            src="https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he"
-          />
+        <div className={styles.videoContainer}>
+          <h2>VIDEOS</h2>
+          <div className={styles.videos}>
+            {videos.map((video, index) => {
+              return <GalleryVideo src={videos[index]} />;
+            })}
+          </div>
         </div>
 
+        <h2>IMAGES</h2>
         <motion.div
           className={styles.images}
           initial={{ opacity: 0, x: 30 }}

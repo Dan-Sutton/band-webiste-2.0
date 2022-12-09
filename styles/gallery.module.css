@@ -5,6 +5,11 @@
 }
 
 .galleryContainer h1 {
+  font-size: 100px;
+  margin: -0.1% 0 -0.1% 0;
+}
+
+.galleryContainer h2 {
   font-size: 50px;
 }
 
@@ -18,9 +23,16 @@
 }
 
 .videos {
-  width: 100vw;
   display: flex;
+  padding: 1% 0 1% 0;
   justify-content: center;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+.videoContainer {
+  background-color: #1d1d1d;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
