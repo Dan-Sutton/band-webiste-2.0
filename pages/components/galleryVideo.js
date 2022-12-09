@@ -26,6 +26,7 @@ function GalleryVideo({ src, index }) {
           height={300}
           frameborder="0"
           src={src}
+          loading="lazy"
         />
       </div>
     </div>
