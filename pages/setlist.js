@@ -5,7 +5,19 @@ import { motion } from "framer-motion";
 
 function setlist() {
   return (
-    <div className={styles.setlist}>
+    <motion.div
+      className={styles.setlist}
+      initial={{ opacity: 0, y: 50 }}
+      animate={{
+        opacity: 1,
+        y: 0,
+        transition: {
+          type: "spring",
+          duration: 1,
+          bounce: 0.2,
+        },
+      }}
+    >
       <div className={styles.navposition}>
         <NavButton />
       </div>
@@ -20,8 +32,8 @@ function setlist() {
             y: 0,
             transition: {
               type: "spring",
-              duration: 1,
-              bounce: 0.2,
+              duration: 3,
+              bounce: 0.4,
             },
           }}
         >
@@ -59,7 +71,7 @@ function setlist() {
           <li>FOOTLOOSE</li>
         </motion.ul>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

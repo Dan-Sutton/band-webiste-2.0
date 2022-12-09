@@ -5,11 +5,12 @@
 }
 
 .setlistUl {
-  list-style: none;
+  list-style: inside;
+
   font-family: "Courier New", Courier, monospace;
   font-size: 25px;
   background-color: #1e1e1e;
-  width: 40%;
+  width: max(40%, 350px);
   border-radius: 10px;
   padding: 3%;
 }

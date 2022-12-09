@@ -34,19 +34,7 @@ function Nav() {
         >
           <Link href={"/setlist"}>SET LIST</Link>
         </motion.li>
-        <motion.li
-          className={styles.listItem}
-          whileHover={{
-            scale: 1.15,
-            transition: {
-              type: "spring",
-              duration: 0.3,
-              bounce: 0.3,
-            },
-          }}
-        >
-          <Link href={"/contact"}>CONTACT</Link>
-        </motion.li>
+
         <motion.li
           className={styles.listItem}
           whileHover={{
@@ -72,6 +60,19 @@ function Nav() {
           }}
         >
           <Link href={"/events"}>EVENTS</Link>
+        </motion.li>
+        <motion.li
+          className={styles.listItem}
+          whileHover={{
+            scale: 1.15,
+            transition: {
+              type: "spring",
+              duration: 0.3,
+              bounce: 0.3,
+            },
+          }}
+        >
+          <Link href={"/contact"}>CONTACT</Link>
         </motion.li>
       </ul>
     </div>
