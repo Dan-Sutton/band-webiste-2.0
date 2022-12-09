@@ -23,6 +23,7 @@ const QUERY = gql`
       description {
         text
       }
+      datevalue
     }
   }
 `;
@@ -35,6 +36,15 @@ export async function getStaticProps() {
     },
     revalidate: 30,
   };
+}
+
+function isAfterToday(date) {
+  const today = new Date();
+  console.log(today);
+
+  today.setHours(23, 59, 59, 998);
+
+  return date > today;
 }
 
 function Events({ events }) {
