@@ -7,7 +7,7 @@ function GalleryVideo({ src, index }) {
   return (
     <div>
       <div>
-        <motion.video
+        <motion.iframe
           onMouseEnter={() => {
             setShowControl(true);
           }}
@@ -23,7 +23,8 @@ function GalleryVideo({ src, index }) {
             },
           }}
           width={500}
-          controls={showControl}
+          height={300}
+          frameborder="0"
           src={src}
         />
       </div>

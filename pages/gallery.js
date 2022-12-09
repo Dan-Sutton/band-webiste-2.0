@@ -27,10 +27,9 @@ function gallery(props) {
   ];
 
   const videos = [
-    "https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he",
-    "https://drive.google.com/uc?export=view&id=16inJGfAyuknbhL--gDXwreM39mYac_wb",
-    "https://drive.google.com/uc?export=view&id=1x5cZLGI3KXfrx9feL3oXV_m9IetJV6xT",
-    "https://drive.google.com/uc?export=view&id=1grJfVwo8s5MaoSth9M3-tjceEDuLM5he",
+    "https://drive.google.com/file/d/1grJfVwo8s5MaoSth9M3-tjceEDuLM5he/preview",
+    "https://drive.google.com/file/d/16inJGfAyuknbhL--gDXwreM39mYac_wb/preview",
+    "https://drive.google.com/file/d/1x5cZLGI3KXfrx9feL3oXV_m9IetJV6xT/preview",
   ];
 
   return (
@@ -44,6 +43,7 @@ function gallery(props) {
 
         <div className={styles.videoContainer}>
           <h2>VIDEOS</h2>
+
           <div className={styles.videos}>
             {videos.map((video, index) => {
               return <GalleryVideo src={videos[index]} />;
