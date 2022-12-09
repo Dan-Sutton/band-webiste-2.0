@@ -1,28 +1,36 @@
 import React from "react";
-import Link from "next/link";
 import styles from "../../styles/EventCard.module.css";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
-function EventCard({
-  date,
-  id,
-  slug,
-  title,
-  updatedAt,
-  coverPhoto,
-  description,
-}) {
+function EventCard({ date, title, coverPhoto, description }) {
   return (
-    <div>
+    <motion.div
+      whileHover={{
+        scale: 1.04,
+        transition: {
+          type: "spring",
+          duration: 0.8,
+          bounce: 0.6,
+        },
+      }}
+      className={styles.eventContainer}
+    >
       {/* <Link href={"/events/" + slug}> */}
-      <h1>{title}</h1>
+      <h1 className={styles.title}>{title}</h1>
       <p>{date}</p>
       <div className={styles.imgContainer}>
-        <Image width={400} height={200} src={coverPhoto.url} alt=""></Image>
+        <Image
+          className={styles.eventImage}
+          width={400}
+          height={200}
+          src={coverPhoto.url}
+          alt=""
+        ></Image>
       </div>
       <p>{description}</p>
       {/* </Link> */}
-    </div>
+    </motion.div>
   );
 }
 

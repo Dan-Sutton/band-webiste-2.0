@@ -1,6 +1,8 @@
 import React from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import EventCard from "./components/EventCard.js";
+import NavButton from "./components/NavButton.js";
+import styles from "../styles/events.module.css";
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_API_KEY);
 
@@ -37,18 +39,24 @@ export async function getStaticProps() {
 function Events({ events }) {
   return (
     <div>
-      {events.map((event) => {
-        return (
-          <EventCard
-            key={event.id}
-            title={event.title}
-            coverPhoto={event.coverPhoto}
-            slug={event.slug}
-            date={event.date}
-            description={event.description.text}
-          />
-        );
-      })}
+      <NavButton />
+
+      <h1 className={styles.title}>EVENTS</h1>
+
+      <div className={styles.events}>
+        {events.map((event) => {
+          return (
+            <EventCard
+              key={event.id}
+              title={event.title}
+              coverPhoto={event.coverPhoto}
+              slug={event.slug}
+              date={event.date}
+              description={event.description.text}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
