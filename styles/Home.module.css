@@ -96,7 +96,7 @@
 
 .aboutContent {
   width: 65%;
-
+  font-family: "Courier New", Courier, monospace;
   display: flex;
   justify-content: center;
   align-items: center;

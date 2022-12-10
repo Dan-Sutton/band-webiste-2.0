@@ -113,7 +113,7 @@ export default function Home() {
           <div className={styles.aboutContent}>
             <About />
           </div>
-
+          {/* 
           <motion.button
             className={styles.contactButton}
             whileHover={{
@@ -126,7 +126,7 @@ export default function Home() {
             }}
           >
             Get in contact now
-          </motion.button>
+          </motion.button> */}
         </div>
       </main>
     </div>
