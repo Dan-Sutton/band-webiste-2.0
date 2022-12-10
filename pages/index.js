@@ -61,7 +61,7 @@ export default function Home() {
 
           <video autoPlay={"true"} loop muted infinite className={styles.video}>
             <source
-              src="https://res.cloudinary.com/dsdpn6tzq/video/upload/v1670360021/Website/new%20site/New_website_header_ksrcqi.mp4"
+              src="https://res.cloudinary.com/ddoeif72w/video/upload/v1670671606/Website/New_website_header_hhrcd1.mp4"
               type="video/mp4"
             />
           </video>
