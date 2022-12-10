@@ -24,7 +24,7 @@ function EventCard({ date, title, coverPhoto, description }) {
           className={styles.eventImage}
           width={400}
           height={200}
-          src={coverPhoto.url}
+          src={coverPhoto}
           alt=""
         ></Image>
       </div>

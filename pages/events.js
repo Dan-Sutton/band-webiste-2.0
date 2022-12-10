@@ -88,7 +88,7 @@ function Events({ events }) {
               <EventCard
                 key={event.id}
                 title={event.title}
-                coverPhoto={event.coverPhoto}
+                coverPhoto={event.coverPhoto.url}
                 slug={event.slug}
                 date={event.date}
                 description={event.description.text}
