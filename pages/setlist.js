@@ -2,6 +2,7 @@ import React from "react";
 import NavButton from "./components/NavButton";
 import styles from "../styles/setlist.module.css";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 function setlist() {
   return (
@@ -18,6 +19,10 @@ function setlist() {
         },
       }}
     >
+      <Head>
+        <title>Setlist | The Wildfire</title>
+        <meta name="The Wildfire function band." content="" />
+      </Head>
       <div className={styles.navposition}>
         <NavButton />
       </div>
@@ -58,12 +63,12 @@ function setlist() {
           <li>LAST NITE</li>
           <li>5 COLOURS IN HER HAIR</li>
           <li>SEX ON FIRE</li>
-          <li>EX'S AND OH'S</li>
+          <li>EX&apos;S AND OH&apos;S</li>
           <li>GETTING STARTED</li>
           <li>HOLD BACK THE RIVER</li>
           <li>WHAT YOU KNOW</li>
           <li>DAKOTA</li>
-          <li>STACEY'S MOM/ TEENAGE DIRTBAG</li>
+          <li>STACEY&apos;S MOM/ TEENAGE DIRTBAG</li>
           <li>YELLOW</li>
           <li>AS IT WAS</li>
           <li>COME TOGETHER/LOSE YOURSELF</li>

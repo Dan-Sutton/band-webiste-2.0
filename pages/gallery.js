@@ -3,10 +3,10 @@ import NavButton from "./components/NavButton";
 import styles from "../styles/gallery.module.css";
 import { motion } from "framer-motion";
 import GalleryImage from "./components/galleryImage";
-import { useState } from "react";
 import GalleryVideo from "./components/galleryVideo";
+import Head from "next/head";
 
-function gallery(props) {
+function gallery() {
   const images = [
     {
       src: "https://drive.google.com/uc?export=view&id=1eQ_MQ-K3MOkYJxShGX4-NxWuIT-vHfmA",
@@ -34,6 +34,10 @@ function gallery(props) {
 
   return (
     <div className={styles.gallery}>
+      <Head>
+        <title>Gallery | The Wildfire</title>
+        <meta name="The Wildfire function band." content="" />
+      </Head>
       <div className={styles.navposition}>
         <NavButton />
       </div>
@@ -46,7 +50,7 @@ function gallery(props) {
 
           <div className={styles.videos}>
             {videos.map((video, index) => {
-              return <GalleryVideo src={videos[index]} />;
+              return <GalleryVideo key={index} src={videos[index]} />;
             })}
           </div>
         </div>
@@ -67,7 +71,12 @@ function gallery(props) {
         >
           {images.map((image, index) => {
             return (
-              <GalleryImage image={image.src} desc={image.desc} index={index} />
+              <GalleryImage
+                key={index}
+                image={image.src}
+                desc={image.desc}
+                index={index}
+              />
             );
           })}
         </motion.div>

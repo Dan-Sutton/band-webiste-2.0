@@ -4,6 +4,8 @@ import contact from "../styles/contact.module.css";
 import { motion } from "framer-motion";
 import NavButton from "./components/NavButton";
 import Swal from "sweetalert2";
+import Link from "next/link";
+import Head from "next/head";
 
 export const Contact = () => {
   const form = useRef();
@@ -66,6 +68,10 @@ export const Contact = () => {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -100, duration: 5 }}
     >
+      <Head>
+        <title>Setlist | The Wildfire</title>
+        <meta name="The Wildfire function band." content="" />
+      </Head>
       <NavButton />
 
       <div className={contact.contactForm}>
@@ -73,12 +79,12 @@ export const Contact = () => {
           <h1 className={contact.title}>CONTACT</h1>
           <div className={contact.contactDesc}>
             <p>
-              We'd love to hear from you! If you have any questions, or would
-              like to secure a booking, please contact us using the form below.
-              Alternatively, you can reach us on our{" "}
-              <a href="https://www.facebook.com/TheWildfireMusic">
+              We would love to hear from you! If you have any questions, or
+              would like to secure a booking, please contact us using the form
+              below. Alternatively, you can reach us on our{" "}
+              <Link href="https://www.facebook.com/TheWildfireMusic">
                 Facebook page.
-              </a>
+              </Link>
             </p>
           </div>
         </div>

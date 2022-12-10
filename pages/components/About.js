@@ -25,7 +25,7 @@ function About() {
     if (!inView) {
       animation.start({ x: 100, opacity: 0 });
     }
-  }, [inView]);
+  }, [inView, animation]);
   return (
     <motion.div ref={ref} animate={animation}>
       <p className={styles.content}>

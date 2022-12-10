@@ -11,7 +11,6 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wght@1,664&display=swap"
           rel="stylesheet"
         ></link>
-        <title>The Wildfire</title>
       </Head>
       <body>
         <Main />

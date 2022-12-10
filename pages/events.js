@@ -4,6 +4,7 @@ import EventCard from "./components/EventCard.js";
 import NavButton from "./components/NavButton.js";
 import styles from "../styles/events.module.css";
 import { motion } from "framer-motion";
+import Head from "next/head.js";
 
 const graphcms = new GraphQLClient(process.env.NEXT_PUBLIC_API_KEY);
 
@@ -50,6 +51,10 @@ function isAfterToday(date) {
 function Events({ events }) {
   return (
     <div>
+      <Head>
+        <title>Events | The Wildfire</title>
+        <meta name="The Wildfire function band." content="" />
+      </Head>
       <NavButton />
       <motion.div
         initial={{ opacity: 0, y: 50 }}

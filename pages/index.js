@@ -2,7 +2,6 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import NavButton from "./components/NavButton";
-import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import HeadShot from "./components/HeadShot";
@@ -12,7 +11,7 @@ export default function Home() {
   const { ref, inView } = useInView({
     threshold: 0.1,
   });
-  const [showMenu, setShowMenu] = useState(false);
+  // const [showMenu, setShowMenu] = useState(false);
   const animation = useAnimation();
 
   useEffect(() => {
@@ -30,7 +29,7 @@ export default function Home() {
     if (!inView) {
       animation.start({ x: "-40vh", opacity: 0 });
     }
-  }, [inView]);
+  }, [inView, animation]);
   return (
     <div className={styles.container}>
       <Head>
