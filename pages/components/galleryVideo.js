@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import styles from "../../styles/galleryVideo.module.css";
 
 function GalleryVideo({ src, index }) {
   const [showControl, setShowControl] = useState(false);
@@ -8,6 +9,7 @@ function GalleryVideo({ src, index }) {
     <div>
       <div>
         <motion.iframe
+          className={styles.video}
           onMouseEnter={() => {
             setShowControl(true);
           }}

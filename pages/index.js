@@ -10,7 +10,7 @@ import About from "./components/About";
 
 export default function Home() {
   const { ref, inView } = useInView({
-    threshold: 0.2,
+    threshold: 0.1,
   });
   const [showMenu, setShowMenu] = useState(false);
   const animation = useAnimation();
@@ -73,7 +73,7 @@ export default function Home() {
           animate={animation}
           className={styles.aboutSection}
         >
-          <h1>WHO ARE THE WILDFIRE?</h1>
+          <h2 className={styles.subheading}>WHO ARE THE WILDFIRE?</h2>
 
           <div className={styles.headshots}>
             <HeadShot

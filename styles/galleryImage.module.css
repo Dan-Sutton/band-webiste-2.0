@@ -13,6 +13,13 @@
   width: 100%;
 }
 
+@media (max-width: 506px) {
+  .galleryImage {
+    width: 280px;
+    height: 190px;
+  }
+}
+
 .desc {
   text-align: center;
   padding: 0 20px 0 20px;
