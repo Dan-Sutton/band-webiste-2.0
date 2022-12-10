@@ -1,3 +1,7 @@
+:root {
+  color-scheme: dark only;
+}
+
 html,
 body {
   padding: 0;
