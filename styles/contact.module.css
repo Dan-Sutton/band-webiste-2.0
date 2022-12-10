@@ -6,6 +6,7 @@
 
 .title {
   font-size: 50px;
+  text-align: center;
 }
 
 .form {
@@ -18,14 +19,14 @@
 .username,
 .email,
 .message {
-  width: 60%;
+  width: max(60%, 400px);
   height: 50px;
   border-radius: 5px;
   border-style: none;
 }
 
 .message {
-  height: 100px;
+  height: 170px;
 }
 
 .submit {
@@ -36,8 +37,26 @@
   font-size: 25px;
   border-style: none;
   border-radius: 30px;
-  padding: 1%;
+  padding: 10px;
 }
 .submit:hover {
   background-color: rgb(234, 212, 20);
+}
+
+.contactDesc {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contactDesc p {
+  width: max(60%, 400px);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
+  text-align: justify;
+  margin-top: -0.5%;
+  margin-bottom: 3%;
 }

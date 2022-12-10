@@ -71,6 +71,16 @@ export const Contact = () => {
       <div className={contact.contactForm}>
         <div className={contact.contacthead}>
           <h1 className={contact.title}>CONTACT</h1>
+          <div className={contact.contactDesc}>
+            <p>
+              We'd love to hear from you! If you have any questions, or would
+              like to secure a booking, please contact us using the form below.
+              Alternatively, you can reach us on our{" "}
+              <a href="https://www.facebook.com/TheWildfireMusic">
+                Facebook page.
+              </a>
+            </p>
+          </div>
         </div>
 
         <form ref={form} onSubmit={sendEmail} className={contact.form}>
@@ -96,7 +106,19 @@ export const Contact = () => {
             name="message"
             placeholder="Message"
           />
-          <input type="submit" value="Send" className={contact.submit} />
+          <motion.input
+            whileHover={{
+              scale: 1.15,
+              transition: {
+                type: "spring",
+                duration: 0.8,
+                bounce: 0.6,
+              },
+            }}
+            type="submit"
+            value="Send"
+            className={contact.submit}
+          />
         </form>
       </div>
     </motion.div>
