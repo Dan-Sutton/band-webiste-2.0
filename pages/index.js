@@ -59,7 +59,7 @@ export default function Home() {
 
           <NavButton />
 
-          <video autoPlay loop muted infinite className={styles.video}>
+          <video autoPlay={"true"} loop muted infinite className={styles.video}>
             <source
               src="https://res.cloudinary.com/dsdpn6tzq/video/upload/v1670360021/Website/new%20site/New_website_header_ksrcqi.mp4"
               type="video/mp4"
