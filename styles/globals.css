@@ -6,9 +6,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, "Noto Serif Display", BlinkMacSystemFont, Segoe UI,
+  font-family: "Noto Serif Display", -apple-system, BlinkMacSystemFont, Segoe UI,
     Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
-    sans-serif, "Noto Serif Display";
+    sans-serif;
 }
 
 a {
